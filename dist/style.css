@@ -1,0 +1,244 @@
+
+html,body{
+    height: 100%;
+    z-index: 1;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #090a0a;
+    margin: 0;
+}
+.head{
+    display: flex;
+    background-color: #155e75;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+h1{ display: flex;
+    width: 20vh;
+    margin-right: 3vh;
+    margin-left: 5vh;
+}
+h2{
+    margin-right: 5vh;
+    margin-left: 10vh;
+}
+
+.input{
+    border: none;
+    border-radius: 50vh;
+    height: 5vh;
+    width: 50vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+}
+
+.side{
+    font-size:20px;
+    padding: 2vh;
+
+}
+button.side{
+    width: 7%;
+    height: 100%;
+    background-color:transparent;
+    border: none;
+    margin: 0px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #0284c7;
+    transition: 1s;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#0284c7 ;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    height: 90%; 
+}
+.home, .today{
+    font-size: 30px;
+    display: flex;
+    height: 75vh;
+    width: 120vh;
+    background-color: transparent;
+    border:  solid black 1px;
+}
+.today{
+    display: none;
+}
+
+.sideHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28vh;
+    height: 100%;
+    padding-right: 3px;
+    background-color: #155e75;
+}
+.textHomeContainer,.homeDateContainer,.homeRateContainer,.homeProjectContainer{
+    padding-top: 10px;
+    font-size: large;
+}
+.titleHome{
+    width: 100%;
+    height: 3vh;
+    padding: 0px;
+}
+.textHome{
+    width:100%;
+    resize: none;
+    padding: 0px;
+}
+.mainHome{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   height: auto;
+   overflow-y:scroll;   
+}
+.ProjectHome{
+    width: 100%;
+    height: 2vh;
+    padding: 0px;
+}
+.formHome{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    
+}
+.homeDateContainer{
+    display: flex;
+    flex-direction: column;
+}
+.toDoContainer{
+    display: flex;
+    align-items: center;
+    justify-content:end;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    width: 95%;
+    height: 40px;
+    font-size: 30px;
+    background-color: aquamarine;
+}
+.toDoContainer:hover{
+    width: 97%;
+    height: 45px;
+    background-color: rgb(68, 247, 187);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.titleContainer{
+    margin-right: auto;
+}
+.checkB{
+    margin: 10px;
+}
+
+.manageCont{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    height: 100%;
+    width: 30%;
+    background-color: rgb(49, 250, 183);
+    
+
+}
+.manageCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detailsButton{
+  background-color: transparent;
+  margin: 5px;
+}
+.detailsButton:hover{
+    background-color: #155e75;
+    transition: 0.9sec;
+}
+
+.closeTabBtn {
+    background-color:transparent;
+}
+.closeTabBtn:hover{
+    background-color: brown;
+    transition: none;
+}
+.editBtn{
+    background-color: transparent;
+    margin-right: 5px;
+}
+.editBtn:hover{
+    transition: none;
+}
+
+.elDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    width:40vw;
+    height:20vh;
+    background-color: rgb(197, 194, 194);
+
+}.overlayPopUp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  backdrop-filter:blur(10px); 
+  position: fixed;
+
+}
+.elDetail{
+    width: 80%;
+    height: 2vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 50px;
+    font-size: larger;
+}
+.elDetailsTitle{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 10px;
+font-size: 30px !important
+}
+.cancelBtn{
+    font-size: larger;
+    width: 5%;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    bottom: 150px;
+    left: 580px;
+    cursor:pointer;
+}
+.cancelBtn:hover{
+    color: rgb(255, 255, 255);
+    background-color:transparent;
+    transition: none;
+}
