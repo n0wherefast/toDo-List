@@ -66,16 +66,13 @@ button:hover{
     width: 100%;
     height: 90%; 
 }
-.home, .today{
+.home{
     font-size: 30px;
     display: flex;
     height: 75vh;
     width: 120vh;
     background-color: transparent;
     border:  solid black 1px;
-}
-.today{
-    display: none;
 }
 
 .sideHome{
@@ -87,7 +84,7 @@ button:hover{
     padding-right: 3px;
     background-color: #155e75;
 }
-.textHomeContainer,.homeDateContainer,.homeRateContainer,.homeProjectContainer{
+.textHomeContainer,.homeDateContainer,.homeRateContainer{
     padding-top: 10px;
     font-size: large;
 }
@@ -109,11 +106,7 @@ button:hover{
    height: auto;
    overflow-y:scroll;   
 }
-.ProjectHome{
-    width: 100%;
-    height: 2vh;
-    padding: 0px;
-}
+
 .formHome{
     display: flex;
     height: 100%;
