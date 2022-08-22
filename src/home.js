@@ -7,10 +7,8 @@ const mainHome = document.createElement('div');
 const textHomeContainer = document.createElement('div');
 const homeDateContainer = document.createElement('div');
 const homeRateContainer = document.createElement('form');
-const homeProjectContainer = document.createElement('div');
 const formHome = document.createElement('form');
 const titleHome = document.createElement('input');
-const projectHome = document.createElement('input');
 const textHome = document.createElement('textarea');
 const homeDate = document.createElement('input');
 const homeRadio1 = document.createElement('input');
@@ -19,20 +17,12 @@ const homeRadio3 = document.createElement('input');
 const submit = document.createElement('input');
  const homeBtn = document.querySelector('.homeBtn')
 const elDetailsTitle = document.createElement('span')
-const todayBtn =document.querySelector('.todayBtn')
-const todaySheet = document.createElement('div');
-const sideToday = document.createElement('div');
-const mainToday = document.createElement('div');
-const formToday = document.createElement('form');
-
-
 
 class homeC {
 
-    constructor(title,project,details,date,priority){
+    constructor(title,details,date,priority){
 
         this.title = title;
-        this.project =project;
         this.details = details;
         this.date = date;
         this.priority = priority;
@@ -46,14 +36,9 @@ let myHome =[toDothinkOne];
    
     home.classList.add('home');
     container.appendChild(home)
- homeBtn.addEventListener('click',()=>{
-
-            todaySheet.style.display='none'  
-            home.style.display='flex'
-
-  });           
+            
             sideHome.className='sideHome';
-            sideHome.textContent='Home';
+            sideHome.textContent='InBox';
             home.appendChild(sideHome);
 
             mainHome.className='mainHome';
@@ -64,21 +49,11 @@ let myHome =[toDothinkOne];
 
         /* ADD TITLE */
             titleHome.classList.add('titleHome');
-            titleHome.placeholder='Add Title'
+            titleHome.placeholder='Add Project Title'
             formHome.appendChild(titleHome);
         /* ADD TITLE */
 
-        /* ADD PROJECT */
-
-        homeProjectContainer.className ='homeProjectContainer';
-        formHome.appendChild(homeProjectContainer);
-        homeProjectContainer.textContent='Create Project';
-
-        projectHome.className='ProjectHome';
-        projectHome.placeholder='Project Name';
-        homeProjectContainer.appendChild(projectHome);
-
-        /* ADD PROJECT */
+       
 
         /*DETAILS */
             textHomeContainer.className='textHomeContainer';
@@ -183,7 +158,7 @@ let myHome =[toDothinkOne];
                                     const dateContainer = document.createElement('div');
                                     let priorityValue = priority();
 
-                                    const newHome = new homeC (titleHome.value,projectHome.value,textHome.value,homeDate.value,priorityValue);
+                                    const newHome = new homeC (titleHome.value,textHome.value,homeDate.value,priorityValue);
                                     
                                     myHome.push(newHome)
 
@@ -254,11 +229,11 @@ let myHome =[toDothinkOne];
 
                                         
                                         elDetailsTitle.className ='elDetailsTitle';
-                                        elDetailsTitle.textContent = titleHome.value;
+                                        elDetailsTitle.textContent = 'Project'
                                         elDetails.appendChild(elDetailsTitle);
 
                                         elDetailsProject.className ='elDetail';
-                                        elDetailsProject.textContent =`Project: ${projectHome.value}`;
+                                        elDetailsProject.textContent =`Project: ${titleHome.value}`;
                                         elDetails.appendChild(elDetailsProject);
 
                                         elDetailsDetail.className ='elDetail';
@@ -430,20 +405,21 @@ let myHome =[toDothinkOne];
                                     console.log(myHome);
 
                                     
-                                    function isToday(date) {
+                                   /* function isToday(date) {
                                         const today = new Date();
                                                                             
                                         if (today.toDateString() === date.toDateString()) {
                                             mainToday.appendChild(toDoContainer.cloneNode(true));
                                             
                                         } else if(today.toDateString() != date.toDateString()){
-                                            mainToday.removeChild(toDoContainer);
+                                            mainToday.removeChild(mainToday.lastElementChild);
+                                            console.log('ok')
                                         }
                                         
                                     }
                                       
                                     
-                                      isToday(new Date(homeDate.value));
+                                      isToday(new Date(homeDate.value));*/
                                       
 
                                 })
@@ -452,7 +428,7 @@ let myHome =[toDothinkOne];
    
                 
 
-                         todayBtn.addEventListener('click',()=>{
+                         /* todayBtn.addEventListener('click',()=>{
                             home.style.display='none'
                             todaySheet.style.display='flex'
                          })  
@@ -469,7 +445,7 @@ let myHome =[toDothinkOne];
                                
 
                                 formToday.classList.add('formHome');
-                                sideToday.appendChild(formToday); 
+                                sideToday.appendChild(formToday); */
                         
                         return home 
                     }
